@@ -1,9 +1,15 @@
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
-    background-color: #3e950c;
+    background-image: url('thumbnail2.jpg');
     padding: 25px 10px;
+    position: relative;
+      top: 50px;
+      border: 30px black;
+      text-align: center;
+      text-shadow: 20px;
   }
+
   
   /* Style the header links */
   .header a {
@@ -15,11 +21,12 @@
     font-size: 20px;
     line-height: 25px;
     border-radius: 4px;
+    float: inline-start;
   }
   
   /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
   .header a.logo {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
   }
@@ -30,15 +37,32 @@
     color: black;
   }
   
-  /* Style the active/current link*/
+  /* Style the active/current link
   .header a.active {
     background-color: dodgerblue;
     color: white;
-  }
+  }*/
   
   /* Float the link section to the right */
   .header-right {
     float: right;
+  }
+  .flex-container , .div-container-img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+     
+    align-items: center;
+    height: 500px;
+    text-align: match-parent;
+    background-color: #f1f1f1;
+    font-size: 15px;
+
+    /*background-color: rgba(11, 103, 196, 0.927);*/
+   
+    
+    
   }
   
   /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
@@ -47,25 +71,49 @@
       float: none;
       display: block;
       text-align: left;
+      
     }
     .header-right {
       float: none;
       text-align: right;
+      position: fixed;
     }
   }
-
-  .div-container-img img {
-    border-width: medium;
-    width: fit-content;
-    width: 300px;
-    height:400px;
-  }
-  .div-container-img tr{
-    padding: auto;
-    width: 300px;
+  .div-container-img
+  {
+    /*background-image: url('thumbnail1.jpg');*/
+    border: 50px black;
+    width: 500px;
     height:500px;
   }
-
-  .div-container-img h3, label{
-    text-align: right;
+  .div-container-img > img {
+    border-width: medium;
+    width: fit-content;
+   align-items: center;
+    width: 300px;
+    height:300px;
   }
+  
+  .div-container-img > h3, label{
+    text-align:center;
+    text-size-adjust: auto;
+
+  }
+
+  .next > button{
+    align-content: flex-end;
+
+  }
+
+  .btn {
+
+  }
+
+  .footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(14, 12, 12);
+    color: white;
+    max-width: 50px;
+  }
+  
